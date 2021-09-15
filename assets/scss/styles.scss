@@ -16,9 +16,6 @@ $color_15: #e44fff;
 $color_16: #00ffe4;
 $color_17: #d3fffa;
 $font_family_1: 'Montserrat';
-$font_family_medium: 'Montserrat Medium';
-$font_family_black: 'Montserrat Black';
-$font_family_light: 'Montserrat Light';
 $background_color_1: #fefefe;
 $background_color_2: #00a9ff;
 $background_color_3: #0df;
@@ -412,7 +409,7 @@ ul {
 					.desc-game {
 						// margin-bottom: 35px;
 						font-size: 19px;
-						font-family: $font_family_light;
+						font-weight: 300;
 					}
 					.box-watch {
 						margin: 45px auto 0;
@@ -1067,7 +1064,7 @@ body.fixed {
 		font-size: 20px;
 		color: $color_17;
 		padding: 0 15px;
-		font-family: $font_family_light;
+		font-weight: 300;
 	}
 }
 .box-1700 {
@@ -1130,21 +1127,21 @@ body.fixed {
 			position: relative;
 			padding-left: 120px;
 			padding-right: 40px;
-			width: 40%;
+			width: 46%;
 			.box-title-theta {
 				position: relative;
 				width: max-content;
 				.title-theta {
 					position: relative;
 					margin-bottom: 15px;
-					font-family: $font_family_black;
 					font-size: 144px;
-					font-weight: bold;
+					font-weight: 900;
 					text-transform: uppercase;
 					line-height: 1;
 					overflow: hidden;
 					white-space: nowrap;
 					animation: typing 0.6s steps(40, end);
+					padding: 0 4px;
 					span {
 						color: #63feff;
 					}
@@ -1689,7 +1686,7 @@ body.fixed {
 			}
 			.experiences {
 				line-height: 1.25;
-				font-family: $font_family_light;
+				font-weight: 300;
 				max-width: 275px;
     			margin: auto;
 			}
@@ -2392,10 +2389,9 @@ body.fixed {
 				.box-title-theta {
 					.title-theta {
 						font-size: 100px;
-						font-size: 87px;
-						span {
-							font-size: 100px;
-						}
+						// span {
+						// 	font-size: 100px;
+						// }
 					}
 				}
 				.box-download {

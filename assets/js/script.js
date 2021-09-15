@@ -153,8 +153,8 @@ $(document).ready(function() {
             responsiveClass:true,
             items: 1,
             dots: true,
-            navText : ["<img src='/assets/images/mutual/btn_prev.png' />", 
-                        "<img src='/assets/images/mutual/btn_next.png' />"],
+            navText : ["<img src='/poo-arena/assets/images/mutual/btn_prev.png' />", 
+                        "<img src='/poo-arena/assets/images/mutual/btn_next.png' />"],
             rewindNav : true,
             nav: true,
             responsive : {
@@ -223,8 +223,8 @@ $(document).ready(function() {
             responsiveClass:true,
             items: 5,
             dots: true,
-            navText : ["<img src='/assets/images/mutual/btn_prev.png' />", 
-                        "<img src='/assets/images/mutual/btn_next.png' />"],
+            navText : ["<img src='/poo-arena/assets/images/mutual/btn_prev.png' />", 
+                        "<img src='/poo-arena/assets/images/mutual/btn_next.png' />"],
             rewindNav : true,
             nav: true,
             responsive : {
