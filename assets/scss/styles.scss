@@ -264,8 +264,9 @@ ul {
 			.box-content {
 				display: flex;
 				flex-wrap: wrap;
-				overflow: hidden;
+				// overflow: hidden;
 				z-index: 2;
+				align-items: flex-end;
 				.box-left {
 					position: relative;
 					width: 60%;
@@ -275,7 +276,7 @@ ul {
 						// width: calc(100% - 53px);
 						height: 100%;
 						display: flex;
-						padding-top: 7.4%;
+						padding-top: 9%;
 						img {
 							width: auto;
 							height: auto;
@@ -291,7 +292,8 @@ ul {
 					display: flex;
 					align-items: center;
 					justify-content: flex-start;
-					padding: 14% 0 0;
+					// padding: 14% 0 0;
+					margin-bottom: -2vw;
 					.icon-game {
 						display: flex;
 						align-items: center;
@@ -304,37 +306,6 @@ ul {
 							height: auto;
 							max-width: 100%;
 							max-height: 100%;
-						}
-					}
-					.y-img-left.icon-game {
-						justify-content: flex-start;
-					}
-					body {
-						&:not(.fp-viewing-about) {
-							&:not(.fp-viewing-home) {
-								.header {
-									.logo-header {
-										.icon-game {
-											height: 50px;
-										}
-									}
-								}
-							}
-						}
-					}
-					.loader-wrapper {
-						.content-loader {
-							.icon-game {
-								height: 120px;
-								margin-bottom: 10px;
-							}
-						}
-					}
-					.header {
-						.logo-header {
-							.icon-game {
-								height: 80px;
-							}
 						}
 					}
 					.box-content-right {
@@ -436,7 +407,7 @@ ul {
 			}
 		}
 		&.owl-carousel {
-			padding-bottom: 20px;
+			// padding-bottom: 20px;
 		}
 		.owl-nav {
 			max-width: 840px;
@@ -462,7 +433,7 @@ ul {
 			right: 47%;
 			width: 100%;
 			left: inherit;
-			bottom: -30px;
+			bottom: 0px;
 			.owl-dot {
 				width: 100px;
 				height: 116px;
@@ -509,9 +480,8 @@ ul {
 				}
 			}
 		}
-		
 	}
-	&:before {
+	&::before {
 		position: absolute;
 		content: "";
 		top: 0;
@@ -1046,14 +1016,14 @@ body.fixed {
 .box-title-main {
 	position: relative;
 	text-align: center;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	z-index: 5;
 	pointer-events: none;
 	.title-main {
 		display: inline-flex;
 		align-items: center;
 		font-family: $font_family_1;
-		font-size: 55px;
+		font-size: 50px;
 		font-weight: bold;
 		color: $color_16;
 		margin-bottom: 12px;
@@ -1230,6 +1200,17 @@ body.fixed {
 	position: relative;
 	padding: 0;
 	background-color: $background_color_13;
+	&::after {
+		position: absolute;
+		content: "";
+		top: -28px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/paging.png);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
 	.box-video {
 		display: flex;
 		align-items: center;
@@ -1268,6 +1249,17 @@ body.fixed {
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
+	&::after {
+		position: absolute;
+		content: "";
+		top: -28px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../images/paging.png);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
 	.box-section {
 		position: relative;
 		overflow-x: hidden;
@@ -1277,7 +1269,7 @@ body.fixed {
 		margin: 0 auto;
 		padding-left: 95px;
 		padding-right: 95px;
-		padding-bottom: 80px;
+		padding-bottom: 50px;
 		.item {
 			text-align: center;
 			position: relative;
@@ -2175,6 +2167,30 @@ body.fixed {
 #fp-nav ul li .fp-tooltip.fp-left {
     left: 25px;
 }
+#fp-nav ul li:first-child a span {
+	background: url(../images/icon-home.png) no-repeat;
+	width: 25px !important;
+    height: 25px !important;
+    transform: rotate( 0deg);
+    background-size: contain;
+    top: -5px;
+    left: 0;
+}
+#fp-nav ul li:last-child a span {
+	background: url(../images/icon-scroll.png) no-repeat;
+	width: 24px !important;
+    height: 24px !important;
+    transform: rotate(0deg);
+    background-size: contain;
+    top: 6px;
+    left: 5px;
+}
+#fp-nav ul li:first-child .fp-tooltip {
+    top: -4px;
+}
+#fp-nav ul li:last-child .fp-tooltip {
+    top: 8px;
+}
 @media only screen and (max-width: 1700px) and (min-width: 1499px) {
 	.owl-carousel {
 		.owl-dots {
@@ -2522,7 +2538,8 @@ body.fixed {
 		.owl-dots {
 			bottom: 5px;
 			.owl-dot {
-				width: 90px;
+				width: 62px;
+				height: 12px;
 			}
 		}
 	}
@@ -2557,12 +2574,14 @@ body.fixed {
 						padding-left: 0;
 						// width: 58%;
 						.image {
-							width: 70%;
+							width: 65%;
 							margin: auto;
+							padding-top: 7%;
 						}
 					}
 					.box-right {
 						// width: 42%;
+						margin-bottom: -4vw;
 						.icon-game {
 							height: 70px;
 							top: -45px;
@@ -2591,6 +2610,7 @@ body.fixed {
 						}
 						.box-watch {
 							padding: 0 20px 0;
+							margin-top: 20px;
 						}
 					}
 				}
@@ -2601,11 +2621,20 @@ body.fixed {
 				bottom: -10px;
 				.owl-dot {
 					width: 75px;
+					margin: 0 14px;
 				}
 			}
 		}
 	}
+	.video-section {
+		&::after {
+			top: -20px;
+		}
+	}
 	.nfts-section {
+		&::after {
+			top: -20px;
+		}
 		.nfts-slider {
 			padding-bottom: 50px;
 			.owl-nav {
@@ -2775,11 +2804,12 @@ body.fixed {
 					.box-left {
 						padding-left: 0;
 						.image {
-							width: 63%;
+							width: 78%;
 							margin: auto;
 						}
 					}
 					.box-right {
+						margin-bottom: 0;
 						.icon-game {
 							height: 70px;
 							top: -45px;
@@ -2808,6 +2838,7 @@ body.fixed {
 						}
 						.box-watch {
 							padding: 0 20px 0;
+							margin-top: 30px;
 						}
 					}
 				}
@@ -3016,7 +3047,9 @@ body.fixed {
 						justify-content: center;
 						.game-intro {
 							&::after {
-								left: -50px;
+								left: 0;
+								border-width: 0px 1px 1px 0px;
+    							transform: skew(0deg);
 							}
 						}
 						.icon-game {
@@ -3030,10 +3063,11 @@ body.fixed {
 					}
 					.box-left {
 						width: 100%;
-						padding-bottom: 20%;
+						padding-bottom: 17%;
 						// padding-top: 8%;
 						.image {
 							transform: initial;
+							padding-top: 0;
 						}
 					}
 				}
@@ -3060,7 +3094,8 @@ body.fixed {
 				right: 0;
 				// position: relative;
 				bottom: inherit;
-				top: 76vw;
+				// top: 76vw;
+				top: 52%;
 				margin: auto;
 				left: 0;
 				align-items: center;
@@ -3122,7 +3157,17 @@ body.fixed {
 			}
 		}
 	}
+	.video-section {
+		padding-top: 0;
+		padding-bottom: 0;
+		&::after {
+			content: none;
+		}
+	}
 	.nfts-section {
+		&::after {
+			content: none;
+		}
 		.box-section {
 			// padding-bottom: 40px;
 		}
@@ -3529,11 +3574,7 @@ body.fixed {
 							font-size: 22px;
 						}
 						.game-intro {
-							&::after {
-								left: 0;
-								border-width: 0px 1px 1px 0px;
-    							transform: skew(0deg);
-							}
+							padding: 25px 14px 0px;
 						}
 						.desc-game {
 							margin-bottom: 20px;
@@ -3563,7 +3604,7 @@ body.fixed {
 			}
 			.owl-dots {
 				max-width: calc(100% - 40px);
-				top: 65vw;
+				top: 75vw;
 				height: 75px;
 				.owl-dot {
 					width: 55px;

@@ -10,6 +10,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const del = require('del');
 const mode = require('gulp-mode')();
 const browserSync = require('browser-sync').create();
+const minifyCSS = require('gulp-minify-css');
 
 // clean tasks
 const clean = () => {
@@ -37,10 +38,11 @@ const css = () => {
   return src('assets/scss/styles.scss')
     .pipe(mode.development( sourcemaps.init() ))
     .pipe(sass().on('error', sass.logError))
+    .pipe(minifyCSS())
     .pipe(autoprefixer())
-    .pipe(rename('styles2.css'))
+    .pipe(rename('styles.css'))
     .pipe(mode.production( csso() ))
-    .pipe(mode.development( sourcemaps.write() ))
+    // .pipe(mode.development( sourcemaps.write() ))
     .pipe(dest('assets/css/'))
     .pipe(mode.development( browserSync.stream() ));
 }
@@ -112,4 +114,4 @@ const watchForChanges = () => {
 
 // public tasks
 exports.default = series(clean, parallel(css, js), watchForChanges);
-exports.build = series(clean, parallel(css, js, copyImages, copyFonts, copyJavascripts, copyStyles, copyHtmls));
+// exports.build = series(clean, parallel(css, js, copyImages, copyFonts, copyJavascripts, copyStyles, copyHtmls));
