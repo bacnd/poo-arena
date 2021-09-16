@@ -1630,19 +1630,6 @@ body.fixed {
 }
 .team-section {
 	background: url(../images/team/section-7-bg.jpg);
-	// .box-team-slider {
-	// 	position: relative;
-	// 	&:after {
-	// 		position: absolute;
-	// 		content: "";
-	// 		top: 32%;
-	// 		left: 0;
-	// 		right: 0;
-	// 		width: 100%;
-	// 		height: 60%;
-	// 		background-color: $background_color_15;
-	// 	}
-	// }
 	.box-team-slider {
 		position: relative;
 	}
@@ -1705,18 +1692,6 @@ body.fixed {
 .roadmap-section {
 	background-image: url("../images/roadmap/section-8-bg.jpg");;
 	position: relative;
-	// &:before {
-	// 	position: absolute;
-	// 	content: '';
-	// 	bottom: 0;
-	// 	left: 0;
-	// 	width: 40%;
-	// 	height: 85%;
-	// 	background-image: url("../images/roadmap/img_ThetaCoin.png");
-	// 	background-repeat: no-repeat;
-	// 	pointer-events: none;
-	// 	background-size: contain;
-	// }
 	.box-section {
 		position: relative;
 		height: 100%;
@@ -1730,18 +1705,6 @@ body.fixed {
 		position: relative;
 		display: block;
 		width: 100%;
-		// &:before {
-		// 	position: absolute;
-		// 	content: '';
-		// 	bottom: 0;
-		// 	left: 0;
-		// 	right: 0;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	background-image: url("../images/roadmap/img_backgroundProgress.png");
-		// 	background-repeat: no-repeat;
-		// 	background-size: cover;
-		// }
 		.box-process {
 			position: relative;
 			width: calc(100% - 280px);
@@ -2013,8 +1976,6 @@ body.fixed {
 						display: flex;
 						border-bottom: 2px solid #ffffff40;
 						align-items: flex-end;
-						label {
-						}
 						.form-control {
 							background-color: transparent;
 							border: none;
@@ -2168,7 +2129,7 @@ body.fixed {
     left: 25px;
 }
 #fp-nav ul li:first-child a span {
-	background: url(../images/icon-home.png) no-repeat;
+	background: url(../images/icons/icon-home.png) no-repeat;
 	width: 25px !important;
     height: 25px !important;
     transform: rotate( 0deg);
@@ -2177,7 +2138,7 @@ body.fixed {
     left: 0;
 }
 #fp-nav ul li:last-child a span {
-	background: url(../images/icon-scroll.png) no-repeat;
+	background: url(../images/icons/icon-scroll.png) no-repeat;
 	width: 24px !important;
     height: 24px !important;
     transform: rotate(0deg);
@@ -2484,6 +2445,9 @@ body.fixed {
 								font-size: 14px;
 							}
 						}
+						img {
+							width: 90%;
+						}
 					}
 				}
 			}
@@ -2607,6 +2571,22 @@ body.fixed {
 			.owl-dot {
 				width: 62px;
 				height: 12px;
+			}
+		}
+	}
+	.about-section {
+		.content-about {
+			.box-info {
+				.desc-theta {
+					margin-bottom: 50px;
+				}
+				.box-download {
+					.item {
+						img {
+							width: 80%;
+						}
+					}
+				}
 			}
 		}
 	}
